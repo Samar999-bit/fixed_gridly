@@ -13,10 +13,11 @@ CORS(app)
 
 # === Load files ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_FILE = os.path.join(BASE_DIR, "lstm_weather_model_fixed.h5")
-SCALER_X_FILE = os.path.join(BASE_DIR, "scaler_X_fixed.pkl")
-SCALER_Y_FILE = os.path.join(BASE_DIR, "scaler_y_fixed.pkl")
-X_SCALED_FILE = os.path.join(BASE_DIR, "X_scaled_fixed.pkl")
+MODEL_FILE = os.path.join(BASE_DIR, "artifacts", "lstm_weather_model_fixed.h5")
+SCALER_X_FILE = os.path.join(BASE_DIR, "artifacts", "scaler_X_fixed.pkl")
+SCALER_Y_FILE = os.path.join(BASE_DIR, "artifacts", "scaler_y_fixed.pkl")
+X_SCALED_FILE = os.path.join(BASE_DIR, "artifacts", "X_scaled_fixed.pkl")
+
 
 model = load_model(MODEL_FILE, compile=False)
 scaler_X = joblib.load(SCALER_X_FILE)
